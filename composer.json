@@ -1,0 +1,14 @@
+{
+    "name": "ashraful/bookium",
+    "autoload": {
+        "psr-4": {
+            "Ashraful\\Bookium\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Md. Ashraful"
+        }
+    ],
+    "require": {}
+}
