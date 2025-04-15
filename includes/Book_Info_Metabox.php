@@ -34,12 +34,13 @@ class Book_Info_Metabox
     public function html($post)
     {
         $published_date = get_post_meta($post->ID, 'published_date', true);
-        $rating = get_post_meta($post->ID, 'rating', true) ;
+        $current_rating = get_post_meta($post->ID, 'rating', true) ;
 
         $options = '';
+        $max_rating = 5;
 
-        for ($i = 1; $i <= 5; $i++) {
-            $options .= '<option value="' . $i . '"' . selected($i, $rating, false) . '>' . $i . '</option>';
+        for ($rating = 1; $rating <= $max_rating; $rating++) {
+            $options .= '<option value="' . $rating . '"' . selected($current_rating, $rating, false) . '>' . $rating . '</option>';
         }
 
 ?>

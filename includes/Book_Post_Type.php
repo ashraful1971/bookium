@@ -75,8 +75,9 @@ class Book_Post_Type
         echo '<option value="">Select Rating</option>';
 
         // Loop through each term and display as options in the dropdown
-        for ($i=1; $i<=5; $i++) {
-            echo '<option value="' . $i . '"' . selected($_GET['rating_filter'], $i, false) . '>' . $i . '</option>';
+        $max_rating = 5;
+        for ($rating = 1; $rating <= $max_rating; $rating++) {
+            echo '<option value="' . $rating . '"' . selected($_GET['rating_filter'], $rating, false) . '>' . $rating . '</option>';
         }
 
         echo '</select>';
@@ -86,7 +87,7 @@ class Book_Post_Type
     {
         global $pagenow;
 
-        if (is_admin() && $pagenow == 'edit.php' && isset($_GET['author' . '_filter']) && $_GET['author' . '_filter'] != 0) {
+        if (is_admin() && $pagenow === 'edit.php' && isset($_GET['author' . '_filter']) && $_GET['author' . '_filter'] != 0) {
             $query->query_vars['tax_query'][] = array(
                 array(
                     'taxonomy'  => 'author',
@@ -96,7 +97,7 @@ class Book_Post_Type
             );
         }
 
-        if (is_admin() && $pagenow == 'edit.php' && isset($_GET['genre' . '_filter']) && $_GET['genre' . '_filter'] != 0) {
+        if (is_admin() && $pagenow === 'edit.php' && isset($_GET['genre' . '_filter']) && $_GET['genre' . '_filter'] != 0) {
             $query->query_vars['tax_query'][] = array(
                 array(
                     'taxonomy'  => 'genre',
@@ -105,8 +106,8 @@ class Book_Post_Type
                 )
             );
         }
-        
-        if (is_admin() && $pagenow == 'edit.php' && isset($_GET['rating' . '_filter']) && $_GET['rating' . '_filter'] != 0) {
+
+        if (is_admin() && $pagenow === 'edit.php' && isset($_GET['rating' . '_filter']) && $_GET['rating' . '_filter'] != 0) {
             $query->query_vars['meta_query'][] = array(
                 array(
                     'key'  => 'rating',
