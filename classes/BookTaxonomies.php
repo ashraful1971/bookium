@@ -1,8 +1,8 @@
 <?php
 
-namespace Ashraful\Bookium;
+namespace Ashraful\Bookium\Classes;
 
-class Book_Taxonomies
+class BookTaxonomies
 {
     private static $instance;
 

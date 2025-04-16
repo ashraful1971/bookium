@@ -1,8 +1,8 @@
 <?php
 
-namespace Ashraful\Bookium;
+namespace Ashraful\Bookium\Classes;
 
-class Book_Post_Type
+class BookPostType
 {
     private static $instance;
 

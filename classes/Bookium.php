@@ -1,6 +1,6 @@
 <?php
 
-namespace Ashraful\Bookium;
+namespace Ashraful\Bookium\Classes;
 
 class Bookium
 {
@@ -28,9 +28,9 @@ class Bookium
      */
     public function init()
     {
-        Book_Post_Type::init();
-        Book_Taxonomies::init();
-        Book_Info_Metabox::init();
-        Book_Api::init();
+        BookPostType::init();
+        BookTaxonomies::init();
+        BookInfoMetabox::init();
+        RestApi::init();
     }
 }

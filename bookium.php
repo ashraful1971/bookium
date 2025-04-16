@@ -13,7 +13,7 @@
  * Text Domain: bookium
  */
 
-use Ashraful\Bookium\Bookium;
+use Ashraful\Bookium\Classes\Bookium;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -26,5 +26,6 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 define( 'BOOKIUM_VERSION', '1.0.0' );
 define( 'BOOKIUM_FILE', __FILE__ );
+define( 'BOOKIUM_DIR_PATH', plugin_dir_path( BOOKIUM_FILE ) );
 
 Bookium::instance();

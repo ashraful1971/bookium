@@ -2,7 +2,9 @@
     "name": "ashraful/bookium",
     "autoload": {
         "psr-4": {
-            "Ashraful\\Bookium\\": "includes/"
+            "Ashraful\\Bookium\\Classes\\": "classes/",
+            "Ashraful\\Bookium\\App\\": "app/",
+            "Ashraful\\Bookium\\Contracts\\": "contracts/"
         }
     },
     "authors": [
