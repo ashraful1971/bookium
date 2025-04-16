@@ -32,5 +32,6 @@ class Bookium
         BookTaxonomies::init();
         BookInfoMetabox::init();
         RestApi::init();
+        ExceptionHandler::init();
     }
 }
