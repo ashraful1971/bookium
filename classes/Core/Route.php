@@ -3,7 +3,6 @@
 namespace Ashraful\Bookium\Classes\Core;
 
 use Ashraful\Bookium\App\Exceptions\InvalidRoutActionException;
-use Exception;
 
 class Route
 {
